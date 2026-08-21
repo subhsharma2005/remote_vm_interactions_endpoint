@@ -87,7 +87,7 @@ def discord_interactions(req: func.HttpRequest) -> func.HttpResponse:
                 power_state = "unknown"
 
             if power_state == "running":
-                message = f"✅ Server's already running. Connect to `{SERVER_ADDRESS}`."
+                message = f" Server's already running at `{SERVER_ADDRESS}`."
             else:
                 try:
                     ok = start_vm()
@@ -97,7 +97,7 @@ def discord_interactions(req: func.HttpRequest) -> func.HttpResponse:
 
                 if ok:
                     message = (
-                        f"🟢 Starting the Palworld server! Give it a minute or two, "
+                        f" Starting the server! Give it a minute or two, "
                         f"then connect to `{SERVER_ADDRESS}`."
                     )
                 else:
